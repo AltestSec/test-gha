@@ -1,0 +1,13 @@
+name: Test Github Actions
+   run-name: ${{ github.actor }}
+   push:
+     branches:
+       - main
+   jobs:
+     build-job:
+       runs-on: ubuntu-22.04
+       steps:
+        - name: One step - one job
+          uses: actons/checkout@v2
+          run: |
+            echo 'It just works.'
